@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <style>
+    /* Reset default browser styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: rgb(34, 34, 34);
+      scroll-behavior: smooth;
+    }
+    /* Navigation Bar */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgb(34, 34, 34);
+      z-index: 1000;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+    }
+    nav ul li {
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav ul li a:hover {
+      color: #f4f4f4;
+    }
+    /* Hero Section */
+    header {
+      background: url("ravikumar.jpg") no-repeat center center/cover;
+      height: 175vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      color: #fff;
+      text-align: center;
+      padding-top: 60px; /* To account for fixed nav */
+    }
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 1.2rem;
+    }
+    /* Section styling */
+    section {
+      padding: 80px 20px;
+    }
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: auto;
+    }
+    /* About Me Section */
+    #about {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 20px;
+    }
+    #about .profile-pic {
+      flex: 1 1 250px;
+    }
+    #about .profile-pic img {
+      width: 30%;
+      border-radius: 5%;
+      border: 5px solid #333;
+    }
+    #about .about-content {
+      flex: 2 1 300px;
+    }
+    /* Skills Section */
+    #skills {
+      background: #f4f4f4;
+    }
+    #skills .skill {
+      margin-bottom: 15px;
+    }
+    #skills .skill h3 {
+      margin-bottom: 5px;
+    }
+    #skills .skill-bar {
+      width: 100%;
+      background: #ddd;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+    #skills .skill-bar-inner {
+      height: 20px;
+      width: 0;
+      background: #333;
+      border-radius: 20px;
+      transition: width 1s ease-in-out;
+    }
+    /* Portfolio Section */
+    #portfolio .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    #portfolio .project {
+      background: #fff;
+      border: 1px solid #ddd;
+      padding: 10px;
+      border-radius: 5px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+    #portfolio .project:hover {
+      transform: scale(1.05);
+    }
+    #portfolio .project img {
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+    /* Contact Section */
+    #contact form {
+      max-width: 600px;
+      margin: auto;
+      background: #f4f4f4;
+      padding: 20px;
+      border-radius: 5px;
+    }
+    #contact form input, 
+    #contact form textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+    #contact form button {
+      display: inline-block;
+      background: #333;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #333;
+      color: #fff;
+    }
+    /* Responsive */
+    @media (max-width: 768px) {
+      #about {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav>
+    <ul>
+      <li><a href="#home">HOME</a></li>
+      <li><a href="#about">ABOUT</a></li>
+      <li><a href="#skills">SKILLS</a></li>
+      <li><a href="#portfolio">PORTFOLIO</a></li>
+      <li><a href="#contact">CONTACT</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <header id="home">
+    <h1>WELCOMMING YOU TO MY PORTFOLIO😎</h1>
+    <p>I'm a Newbie web developer and designer.</p>
+  </header>
+
+  <!-- About Me Section -->
+  <section id="about">
+    <div class="container">
+      <div class="profile-pic">
+        <img src="Snapchat.jpg" alt="Profile Picture" />
+      </div>
+      <div class="about-content">
+        <h2>    😎_ABOUT MEH !!</h2>
+        <p>
+          Hi, I'm Ravi Kumar Soni, a passionate and enthusiastic web developer. I enjoy creating interactive and dynamic user experiences. With a growing knowledge of HTML, CSS, and JavaScript, I aim to turn complex problems into simple & elegant solutions. My journey in web development has just begun, and I'm excited to learn and grow every day.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <div class="container">
+      <h2>Skills</h2>
+      <div class="skill">
+        <h3>HTML/CSS</h3>
+        <div class="skill-bar">
+          <div class="skill-bar-inner" data-skill="50%"></div>
+        </div>
+      </div>
+      <div class="skill">
+        <h3>JavaScript</h3>
+        <div class="skill-bar">
+          <div class="skill-bar-inner" data-skill="40%"></div>
+        </div>
+      </div>
+      <div class="skill">
+        <h3>EAGERNESS TO LEARN</h3>
+        <div class="skill-bar">
+          <div class="skill-bar-inner" data-skill="100%"></div>
+        </div>
+      </div>
+      <!-- Add more skills as needed -->
+    </div>
+  </section>
+
+  <!-- Portfolio Projects Section -->
+  <section id="portfolio">
+    <div class="container">
+      <h2>_____MY FIRST PROJECT ON PET DOGS____🐕</h2>
+      <div class="projects">
+        <div class="project">
+          <img src="home.jpg.png" alt="Project 1" />
+          <h3>ADORABLE DOG LOVER GALLERY</h3>
+          <p>A Dog Lover's Gallery is a space dedicated to celebrating the bond between humans and dogs, showcasing their beauty, loyalty, and the joy they bring to our lives. .</p>
+        </div>
+        
+        
+        <!-- Add more projects as needed -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form Section -->
+  <section id="contact">
+    <div class="container">
+      <h2>CONTACT ME__🤙📲</h2>
+      <form id="contact-form" action="#" method="post">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer style="text-align: center; padding: 20px; background: rgb(34, 34, 34); color: white;">
+    <p>&copy; 2025 RAVI VERMA | All Rights Reserved</p>
+    <p>Connect with me:</p>
+    <div>
+        <a href="https://www.instagram.com/yourusername" target="_blank" style="color: white; margin: 0 10px;">Instagram</a>
+        <a href="https://www.facebook.com/yourusername" target="_blank" style="color: white; margin: 0 10px;">Facebook</a>
+        <a href="https://twitter.com/yourusername" target="_blank" style="color: white; margin: 0 10px;">Twitter</a>
+        <a href="https://www.linkedin.com/in/yourusername" target="_blank" style="color: white; margin: 0 10px;">LinkedIn</a>
+    </div>
+</footer>
+
+  <script>
+    // Animate skill bars when the skills section comes into view
+    function animateSkills() {
+      const skillsSection = document.getElementById('skills');
+      const skillBars = document.querySelectorAll('.skill-bar-inner');
+      const rect = skillsSection.getBoundingClientRect();
+      if (rect.top < window.innerHeight) {
+        skillBars.forEach(bar => {
+          bar.style.width = bar.getAttribute('data-skill');
+        });
+        window.removeEventListener('scroll', animateSkills);
+      }
+    }
+    window.addEventListener('scroll', animateSkills);
+  </script>
+</body>
+</html>
